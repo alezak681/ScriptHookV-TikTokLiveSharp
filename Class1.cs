@@ -192,8 +192,7 @@ public class FirstGTAMOD : Script // Change "YouTubeTutorial" to the name of you
         {
             Game.Player.Character.Position = realRampBottom;
 
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\Hyper\source\repos\FirstGTAMOD\FirstGTAMOD\Audio\finish3.wav");
-            player.Play();
+
             World.AddExplosion(realRampBottom + new Vector3(5f,5f,0f), ExplosionType.Flare, 1.0f, 1.0f);
             World.AddExplosion(realRampBottom + new Vector3(-5f, 5f, 0f), ExplosionType.Flare, 1.0f, 1.0f);
             PlayCelebrationAnimation("anim@mp_player_intcelebrationmale@air_guitar", "air_guitar");
@@ -202,8 +201,6 @@ public class FirstGTAMOD : Script // Change "YouTubeTutorial" to the name of you
         if (playerPosition.Z < 10)          //Floor teleport zone
         {
             Game.Player.Character.Position = realRampBottom;
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\Hyper\source\repos\FirstGTAMOD\FirstGTAMOD\Audio\lose.wav");
-            player.Play();
         }
 
     }
@@ -298,8 +295,6 @@ public class FirstGTAMOD : Script // Change "YouTubeTutorial" to the name of you
     {
         if (!sequenceRunning)
         {
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\Hyper\source\repos\FirstGTAMOD\FirstGTAMOD\Audio\nuke.wav");
-            player.Play();
             sequenceRunning = true;
             nextExplosionTime = DateTime.Now.AddSeconds(1); // Start countdown
             currentExplosionIndex = 0;
